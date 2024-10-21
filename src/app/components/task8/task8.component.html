@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Task 8: Customer Data Table</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ customer.Name }}</td>
+            <td>{{ customer.Country }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

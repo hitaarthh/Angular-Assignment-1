@@ -1,0 +1,16 @@
+<h2>Task 10: Shopping Cart</h2>
+
+<div class="cart">
+  <h3>Your Shopping Cart</h3>
+  <ul>
+    <li *ngFor="let item of cartItems; let i = index">
+      {{ item }}
+      <button (click)="removeItem(i)" class="remove-btn">Remove</button>
+    </li>
+  </ul>
+</div>
+
+<div class="add-item">
+  <input type="text" [(ngModel)]="newItem" placeholder="Enter new item">
+  <button (click)="addItem()">Add to Cart</button>
+</div>

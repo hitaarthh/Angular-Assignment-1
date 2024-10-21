@@ -1,0 +1,34 @@
+/* Custom styles to complement Bootstrap */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .nav-item {
+      margin-right: 10px;
+    }
+  }

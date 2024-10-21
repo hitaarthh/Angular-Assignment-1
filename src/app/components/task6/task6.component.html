@@ -1,0 +1,17 @@
+<h2>Task 6: Uppercase Name Display</h2>
+<form>
+  <div>
+    <label for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      [(ngModel)]="name">
+  </div>
+</form>
+
+<h3>{{ name | uppercase }}</h3>
+
+<p>Change the name inside the input field. The displayed name will always be in uppercase.</p>
+
+<button (click)="updateNameProgrammatically()">Change Name Programmatically</button>

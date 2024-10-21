@@ -1,0 +1,33 @@
+<h2>Task 4: Email Validation Form</h2>
+<form #emailForm="ngForm">
+  <div>
+    <label for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      [(ngModel)]="email" 
+      required 
+      email 
+      #emailInput="ngModel">
+  </div>
+  
+  <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+    <p class="error" *ngIf="emailInput.errors?.['required']">Email is required.</p>
+    <p class="error" *ngIf="emailInput.errors?.['email']">Not a valid e-mail address.</p>
+  </div>
+
+  <div>
+    <h3>Form Status:</h3>
+    <p [ngClass]="{'true': emailForm.form.valid, 'false': !emailForm.form.valid}">
+      Valid: {{ emailForm.form.valid }}
+    </p>
+    <p [ngClass]="{'true': emailForm.form.dirty, 'false': !emailForm.form.dirty}">
+      Dirty: {{ emailForm.form.dirty }}
+    </p>
+    <p [ngClass]="{'true': emailForm.form.touched, 'false': !emailForm.form.touched}">
+      Touched: {{ emailForm.form.touched }}
+    </p>
+    <p>Error: {{ emailInput.errors | json }}</p>
+  </div>
+</form>

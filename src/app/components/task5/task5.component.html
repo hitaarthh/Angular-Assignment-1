@@ -1,0 +1,17 @@
+<h2>Task 5: Two-way Binding Demonstration</h2>
+<form>
+  <div>
+    <label for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      [(ngModel)]="name">
+  </div>
+</form>
+
+<h3>{{ name }}</h3>
+
+<p>Change the name inside the input field, and the model data will change automatically, and therefore also the header will change its value.</p>
+
+<button (click)="updateNameProgrammatically()">Change Name Programmatically</button>
